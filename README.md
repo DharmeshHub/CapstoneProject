@@ -206,7 +206,7 @@ Accuracy - 0.8166666666666667</br>
 Parameter sampling - Random</br>
 Termination Policy - BANDIT</br>
 
-***Deployment steps of model: ***
+***Deployment steps of model:***
 
 Register the model
 Prepare an inference configuration
@@ -216,13 +216,13 @@ Deploy the model to the compute target.
 Test the resulting web service.
 
 
-***Registered AutoML model: ***
+***Registered AutoML model:***
 
 ![Registered AutoML](images/AutoML_model_download.png?raw=true "Registered AutoML")
 
 ![Registered AutoML](images/AutoML_Model_Registered.png?raw=true "Registered AutoML")
 
-***Deployed AutoML model: ***
+***Deployed AutoML model:***
 
 ![Deployed AutoML](images/AutoML_Deployed_SDK.png?raw=true "Deployed AutoML")
 ![Deployed AutoML](images/AutoML_Deployed_Model_SDK.png?raw=true "Deployed AutoML")
@@ -233,11 +233,11 @@ Test the resulting web service.
 
 - Compute Target: As compute target, I chose the Azure Container Instances (ACI) service, which is used for low-scale CPU-based workloads that require less than 48 GB of RAM. The AciWebservice Class represents a machine learning model deployed as a web service endpoint on Azure Container Instances. The deployed service is created from the model, script, and associated files, as I explain above. The resulting web service is a load-balanced, HTTP endpoint with a REST API. We can send data to this API and receive the prediction returned by the model.
 
-****The service is healthy and the endpoint is available: ****
+***Service is healthy and the endpoint is available:***
 
 ![Deployed AutoML](images/AutoML_Endpoint_details.png?raw=true "Deployed AutoML")
 
-***Consume End point: ***
+***Consume End point:***
 Created the endpoint.py script to interact with the trained model. scoring_uri is REST endpoint point URL and Key is the authentication key generated while deploying the model using Enable Authentication.
 
 ![Consume End point](images/AutoML_BestModel_Consume.png?raw=true "Consume End point")
