@@ -15,7 +15,6 @@ port 8000) to be used in swagger-ui would be:
 
 """
 
-
 from http.server import HTTPServer, SimpleHTTPRequestHandler, test
 import sys
 
