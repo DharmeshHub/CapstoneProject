@@ -151,6 +151,10 @@ Following are screenshot of AutoML experiment run.
 
 ![Best Runs3](images/BestRunDetails2.png?raw=true "Best Run2")
 
+***Best model application insights:***
+
+![Best Runs3](images/BestModel_App_Insights.png?raw=true "Best Run2")
+
 
 ## Hyperparameter Tuning
 
