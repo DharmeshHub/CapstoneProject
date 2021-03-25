@@ -128,21 +128,21 @@ Following are screenshot of AutoML experiment run.
 ![AutoML RunDetails](images/AutoML_Exp_Completed_SDK.png?raw=true "AutoML RunDetails") 
 
 ***AutoML runs:***
-![AutoML Runs](images/Auto_RunDetails.png.png?raw=true "AutoML Runs") 
+![AutoML Runs](images/Auto_RunDetails.png?raw=true "AutoML Runs") 
 
 
 ***Best model top features:***
-![Best Model features](images/BestModel_Topfeatures.png.png?raw=true "Best Model features")
+![Best Model features](images/BestModel_Topfeatures.png?raw=true "Best Model features")
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ***Best model run details:*** _Details of Best run:_
 
-![Best Runs](images/BestRunDetails.png.png?raw=true "Best Run")
+![Best Runs](images/BestRunDetails.png?raw=true "Best Run")
 
-![Best Runs2](images/BestRunDetails1.png.png?raw=true "Best Run1") 
+![Best Runs2](images/BestRunDetails1.png?raw=true "Best Run1") 
 
-![Best Runs3](images/BestRunDetails2.png.png?raw=true "Best Run2")
+![Best Runs3](images/BestRunDetails2.png?raw=true "Best Run2")
 
 
 
