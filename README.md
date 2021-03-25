@@ -50,18 +50,101 @@ Below are (13) clinical features in this dataset:
 
 
 ### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
+The model we build using Heart failure dataset classify whether patient have chance of survival or not. Model use above list features and result in target column (Death event) with value 0 (no) or 1 (yes).
+
 
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
 
+I downloaded dataset file (.csv) from Kaggle site and added to my GitHub respository. I access dataset directly from my GitHub repository and registered the dataset into workspace. I have also added dataset file in my Jupyter notebook directory to access data during training (train.py)
+
+***Create Dataset:*** _URI source_
+[Create Dataset Registered](images/CreateDataset.png?raw=true "Create Dataset") 
+
+***Registered datasets:*** _heart-failure-prediction_
+![Dataset Registered](images/RegisteredDataset.png?raw=true "Dataset Registered") 
+
+***Registered datasets Source:*** _URI_
+![Dataset URI](images/RegisteredDatasetURI.png?raw=true "Dataset URI") 
+
+ 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
+
+Below is the AutoML setting and configuration for this project.
+![AutoML Configuration](images/AutoMLConfiguration.png?raw=true "AutoML Configuration") 
+
+_experiment_timeout_minutes=20_
+
+This is an exit criterion and is used to define how long (in minutes), the experiment should continue to run. To help avoid experiment time out failures, I used the minimum of 20 minutes.
+
+_max_concurrent_iterations_: 4
+
+It represents the maximum number of iterations that would be executed in parallel.
+
+_task='classification'_
+
+This defines the experiment type which in this case is classification.
+
+_primary_metric='accuracy'_
+
+I chose accuracy as the primary metric for this classification model.
+
+_n_cross_validations=2_
+
+This parameter sets how many cross validations to perform, based on the same number of folds (subsets). Two folds for cross-validation are defined. So, two different trainings, each training using 1/2 of the data, and each validation using 1/2 of the data with a different holdout fold each time.
+
+_enable_early_stopping=True_
+
+Early stopping helps in performance, it terminates poor performing run and fully run good performing run.
+
+_featurization=auto_
+
+Featurization is done automatically, i.e. normalization technique are applied to your data. This help certain algorithms that are sensitive to features on different scales.
+
+_lable_column_name = "DEATH_EVENT"
+The name of the label (target) column. This parameter is applicable to training_data and validation_data parameters.
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
+Below is the best model run for AutoML model.
+run_id = AutoML_c6507e5f-cd46-4860-a977-7732236037f7_16
+Accuracy - 0.852841163310962
+Algorithm - VotingEnsemble
+
+
+Following are screenshot of AutoML experiment run.
+
+***AutoML Completed:***
+[AutoML Completed](images/AutoML_Exp_Completed.png?raw=true "AutoML Completed") 
+
+***Data Guardrials:***
+[Data Guardrials](images/DataGuardrials.png?raw=true "Data Guardrials") 
+
+***AutoML Best Model:***
+[AutoML Best Model](images/AutoML_Exp_BestModel1.png?raw=true "AutoML Best Model") 
+
+***AutoML RunDetails Widget:***
+[AutoML RunDetails](images/AutoML_Exp_Completed_SDK.png?raw=true "AutoML RunDetails") 
+
+***AutoML runs:***
+[AutoML Runs](images/Auto_RunDetails.png.png?raw=true "AutoML Runs") 
+
+
+***Best model top features:***
+[Best Model features](images/BestModel_Topfeatures.png.png?raw=true "Best Model features")
+
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+
+***Best model run details:*** _Details of Best run:_
+
+[Best Runs](images/BestRunDetails.png.png?raw=true "Best Run") 
+
+[Best Runs2](images/BestRunDetails1.png.png?raw=true "Best Run1") 
+
+[Best Runs3](images/BestRunDetails2.png.png?raw=true "Best Run2")
+
+
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
