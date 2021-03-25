@@ -127,16 +127,19 @@ Following are screenshot of AutoML experiment run.
 ***AutoML RunDetails Widget:***
 ![AutoML RunDetails](images/AutoML_Exp_Completed_SDK.png?raw=true "AutoML RunDetails") 
 
-***AutoML runs:***
-![AutoML Runs](images/Auto_RunDetails.png?raw=true "AutoML Runs") 
-
-
 ***Best model top features:***
 ![Best Model features](images/BestModel_Topfeatures.png?raw=true "Best Model features")
 
+***Best model metrics:***
+![Best Model metrics](images/AutoML_BestModel_Metrics.png?raw=true "Best Model metrics")
+
+
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
-***Best model run details:*** _Details of Best run:_
+***AutoML runs:***
+![AutoML Runs](images/Auto_RunDetails.png?raw=true "AutoML Runs") 
+
+***Best model run details:***
 
 ![Best Runs](images/BestRunDetails.png?raw=true "Best Run")
 
@@ -145,13 +148,49 @@ Following are screenshot of AutoML experiment run.
 ![Best Runs3](images/BestRunDetails2.png?raw=true "Best Run2")
 
 
-
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+
+For Hyperparameter tuning model i choose Scikit-learn Logistic Regression model. 
+Sampling method chosen is random sampling as parameters, it supports discrete and continuous hyperparameters. It supports early termination of low-performance runs. It is computationally less expensive as it takes subset of combinations and it's faster unlike GridParameterSampling. Some users do an initial search with random sampling and then refine the search space to improve results. In random sampling, hyperparameter values are randomly selected from the defined search space. You can also specify the maximum number of runs that you want the module to execute. This option is useful when you want to increase model performance by using the metrics of your choice but still conserve computing resources. GridParameterSampling utilize more resources compare to RandomParameterSampling. 
+
+Here i chose discrete values with _choice_ for both parameters, _C_ and _max_iter_. _C_ is the Regularization and _max_iter_ is the maximum number of iterations. 
+This option trains a model by using a set number of iterations. You specify a range of values to iterate over, and the module uses a randomly chosen subset of those values. Values are chosen with replacement, meaning that numbers previously chosen at random are not removed from the pool of available numbers. So the chance of any value being selected stays the same across all passes.
+
+For more aggressive savings, used Bandit Policy with a smaller allowable slack or Truncation Selection Policy with a larger truncation percentage. Any run that doesn't fall within the slack factor or slack amount of the evaluation metric with respect to the best performing run will be terminated. This means that with this policy, the best performing runs will execute until they finish.
+
+![Hyperparameter](images/HD_Parameters.png?raw=true "Hyperparameter")
+
+_evaluation_interval_: (optional) the frequency for applying the policy. Each time the training script logs the primary metric counts as one interval.
+
+_slack_factor_: The amount of slack allowed with respect to the best performing training run. This factor specifies the slack as a ratio.
+
+_delay_evaluation: (optional) delays the first policy evaluation for a specified number of intervals.
 
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+
+***HyperDrive run Completed:***
+
+![Hyperdrive Completed](images/HD_Exp_Completed_SDK.png?raw=true "Hyperdrive Completed")
+
+![Hyperdrive Completed](images/HD_Exp_Completed.png?raw=true "Hyperdrive Completed")
+
+![Hyperdrive Child runs](images/HD_Childrun_SDK.png?raw=true "Hyperdrive Child runs")
+
+
+
+***HyperDrive Best run:***
+
+![Hyperdrive Bestrun](images/HD_BestRun.png?raw=true "Hyperdrive Bestrun")
+
+![Hyperdrive Bestrun](images/HD_Bestrun_SDK.png?raw=true "Hyperdrive Bestrun")
+
+![Hyperdrive Bestrun](images/HD_Bestrun_SDK1.png?raw=true "Hyperdrive Bestrun")
+
+![Hyperdrive childruns](images/HD_Childrun_SDK.png?raw=true "Hyperdrive childruns")
+
 
 *TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
