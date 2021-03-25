@@ -57,7 +57,7 @@ I downloaded dataset file (.csv) from Kaggle site and added to my GitHub resposi
 
 ***Create Dataset:*** _URI source_
 
-[Create Dataset Registered](images/CreateDataset.png?raw=true "Create Dataset") 
+![Create Dataset Registered](images/CreateDataset.png?raw=true "Create Dataset") 
 
 ***Registered datasets:*** _heart-failure-prediction_
 
@@ -244,7 +244,7 @@ Created the endpoint.py script to interact with the trained model. scoring_uri i
 
 ![Run End point](images/AutoML_BestModel_Consume_SDK.png?raw=true "Run End point")
 
-![End point test](images/Endpoint_Test.png.png?raw=true "Test End point")
+![End point test](images/Endpoint_Test.png?raw=true "Test End point")
 
 ***[Optional] Swagger Documentation:***
 
@@ -257,7 +257,7 @@ Swagger is a set of open-source tools built around the OpenAPI Specification tha
 
 ***Service deleted:***
 
-![Service delete](images/ServiceDeleted.png.png?raw=true "Delete Service")
+![Service delete](images/ServiceDeleted.png?raw=true "Delete Service")
 
 
 ## Screen Recording
@@ -274,5 +274,4 @@ More specifically, the screencast demonstrates:
 - More on time limit, I saw some other dataset on kaggle which required lots of encoding and cleaning so finally used what is suggested in project video. Tried one big dataset but accuracy was very low for all models and timing out.
 - We can explore more on using customize featurization settings to ensure that the data and features that are used to train your ML model result in relevant predictions.
 - For HyperDrive model, a range of different optimization algorithms can be used, like grid search as we did random search. Define a new model and set the hyperparameter values of the model to the values found by different search. Then fit the model on all available data and use the model to start making predictions on new data.
-
 
