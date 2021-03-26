@@ -169,36 +169,15 @@ Voting Ensemble estimator and weights:
 
 ![Best Runs estimator](images/FittedModelWeights.png?raw=true "Best Run estimator") 
 
-
+Voting Ensemble estimator and weights:
 ![Best Runs2](images/Estimator.png?raw=true "Best Run1") 
 
 ![Best Runs2](images/BestRunDetails1.png?raw=true "Best Run1") 
 
 
-('prefittedsoftvotingclassifier',...\n", " min_samples_leaf=0.01,\n", " min_samples_split=0.2442105263157895,\n", " min_weight_fraction_leaf=0.0,\n", " n_estimators=10,\n", " n_jobs=1,\n", " oob_score=False,\n", " random_state=None,\n", " verbose=0,\n", " warm_start=False))],\n", " verbose=False))],\n",
-
-min_samples_split - An internal node will have further splits, this specifies the minimum number of sample required to split an internal node. We can specifiy a number to denote the minimum number or a fraction to denote the percentage of samples in an internal node.
-
-min_samples_leaf - A leaf node is a node without any further splits. This specifies the minimum number of samples required to be a leaf nodes.
-
-min_weight_fraction_leaf - Default=0.0 This is quite similar to min_samples_leaf, but it uses a fraction of the sum total number of observations instead.
-
-n_estimators - Default=10 The number of trees your want to build within a Random Forest before aggregating the predictions. The higher the number the better, but it is important to know this is more computationally expensive and will take longer for your code to run.
-
-n_jobs-(integer)-Default=1 This lets the computer know how many processors it is allowed to use. The default value of 1 means it can only use one processor. If you use -1 it means that there is no restriction of how much processing power the code can use. Setting your n_jobs to -1 will often lead to faster processing.
-
-oob_score-(boolean)-Default=False This is a cross-validation method that is very similar to a leave-one out validation technique where the generalized estimated performance of a model is trained on n-1 samples of the data. However, oob_score is much faster because it grabs all observations used in the trees and finds out the maximum score for each samples base on the trees which did not use that samples to train.
-
-random_state-(integer, RandomState instance, None)-Default=None Since the bootstrapping generates random samples it is often hard to exactly duplicate results. This parameter makes it easy for others to replicate your results if given the same training data and parameters.
-
-verbose-(integer)-Default=0 Verbose means that you are setting the logging output which gives you constant updates about what the model is doing as it processed. This parameter sets the verbosity of the tree’s building process. It is not always useful and may take up an unnecessary space in your notebook.
-
-warm_start-(boolean)-Default=False At False it fits a new forest each time as opposed to when it is True it adds estimators and reuses the solution of the previous fit. It is mostly used when you are using recursive feature selection. This means that when you drop some features other features will gain in importance and to “appreciate” the trees they must be reused. It is often used with backward elimination in regression models and not often used in classification models
-
-
-
 ***Best model application insights:***
 
+Best model logs
 ![Best Runs3](images/BestModel_App_Insights.png?raw=true "Best Run2")
 
 
