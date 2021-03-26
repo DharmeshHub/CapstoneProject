@@ -236,12 +236,11 @@ Accuracy - 0.8166666666666667</br>
 Parameter sampling - Random</br>
 Termination Policy - BANDIT</br>
 
+
+For this project we just need low-scale CPU so we chose Azure Container Instance Service (AciWebService) with 1 cpu and 1 gb of ram. The compute target you use to host your model will affect the cost and availability of your deployed endpoint so i chose to deployed model as a web service in the ACI compute target.
+	
 ***Deployment steps of model:***
-	For this project we just need low-scale CPU so we chose Azure Container Instance Service (AciWebService) with 1 cpu and 1 gb of ram.
-	The compute target you use to host your model will affect the cost and availability of your deployed endpoint so i chose to deployed model as a web service in the ACI compute target.
- 
-
-
+	 
 - Register the model
 - Prepare an inference configuration and entry script
 - Choose a compute target.
@@ -261,13 +260,13 @@ Registered model in Azure Machine Learning Studio:
 
 ![Registered AutoML](images/AutoML_Model_Registered.png?raw=true "Registered AutoML")
 
-***Inference configuration and entry script***
+***Inference configuration and entry script:***
 
 The inference configuration describes how to configure the model to make predictions. It references your scoring script (entry_script) and is used to locate all the resources required for the deployment. Inference configurations use Azure Machine Learning environments to define the software dependencies needed for your deployment.
 
 The Entry script (scoring_file_v_1_0_0.py) loads the trained model, processes input data from requests, does real-time inferences, and returns the result. The designer automatically generates a scoring.py entry script file when the Train Model module completes.
 
-***Compute Targer***
+***Compute Target:***
 
 Compute Target: As compute target, I chose the Azure Container Instances (ACI) service, which is used for low-scale CPU-based workloads that require less than 48 GB of RAM. The AciWebservice Class represents a machine learning model deployed as a web service endpoint on Azure Container Instances. The deployed service is created from the model, script, and associated files, as I explain above. The resulting web service is a load-balanced, HTTP endpoint with a REST API. We can send data to this API and receive the prediction returned by the model.
 
