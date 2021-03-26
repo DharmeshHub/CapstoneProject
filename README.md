@@ -14,8 +14,8 @@ In order to run the project in Azure Machine Learning Studio, we will need the t
 - `automl.ipynb`: AutoML model;
 - `hyperparameter_tuning.ipynb`: HyperDrive model.
 - `heart_failure_clinical_records_dataset.csv`: the dataset file.
-
-- Additionally, Models are created under Python 3.6 SDK environment and xgboost with verion 1.3.3 was installed. I removed version 1.3.3 and installed version xgboost==0.90 version. This we need to get best run detail.
+- `env.yml`: the environment file which is also downloaded from within Azure Machine Learning Studio.
+- `requirements.txt': Packages that the project requires.
 
 ## Dataset
 
