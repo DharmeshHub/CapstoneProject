@@ -129,7 +129,7 @@ Following are screenshot of AutoML experiment run.
 
 ***AutoML RunDetails Widget:***
 
-![AutoML RunDetails] (images/RunWidget.png?raw=true "AutoML RunDetails")
+![AutoML RunDetails](images/RunWidget.png?raw=true "AutoML RunDetails")
 
 ![AutoML RunDetails](images/AutoML_Exp_Completed_SDK.png?raw=true "AutoML RunDetails") 
 
