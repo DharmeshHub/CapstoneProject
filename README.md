@@ -15,7 +15,7 @@ In order to run the project in Azure Machine Learning Studio, we will need the t
 - `hyperparameter_tuning.ipynb`: HyperDrive model.
 - `heart_failure_clinical_records_dataset.csv`: the dataset file.
 - `env.yml`: the environment file which is also downloaded from within Azure Machine Learning Studio.
-- `requirements.txt': Packages that the project requires.
+- `requirements.txt`: Packages that the project requires.
 
 ## Dataset
 
