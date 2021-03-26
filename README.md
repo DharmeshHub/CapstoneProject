@@ -108,8 +108,8 @@ The name of the label (target) column. This parameter is applicable to training_
 ### Results
 
 Below is the best model run for AutoML model.
-run_id = AutoML_c6507e5f-cd46-4860-a977-7732236037f7_16
-Accuracy - 0.852841163310962
+run_id = AutoML_b2b5bd0a-c886-4979-9f5e-d1643a76db5d_14
+Accuracy - 0.8394854586129754
 Algorithm - VotingEnsemble
 
 
@@ -200,8 +200,8 @@ _delay_evaluation: (optional) delays the first policy evaluation for a specified
 Below are both model results. The difference is the accuracy as above between two models. AutoML runs data agains multiple alogorithm so we get best model with higher accuracy compare to Hyperdrive model where we are working with one model. In every AutoML experiment, automatic scaling and normalization techniques are applied to your data by default. These techniques are types of featurization that help certain algorithms that are sensitive to features on different scales. You can enable more featurization, such as missing-values imputation, encoding, and transforms, in case of HyperDrive model we have to tune model with multiple runs.
 
 <b>AutoML Model:</b></br>
-run_id = AutoML_c6507e5f-cd46-4860-a977-7732236037f7_16</br>
-Accuracy - 0.852841163310962</br>
+run_id = AutoML_b2b5bd0a-c886-4979-9f5e-d1643a76db5d_14</br>
+Accuracy - 0.8394854586129754</br>
 Algorithm - VotingEnsemble</br>
 
 <b>HyperDrive Model:</b></br>
