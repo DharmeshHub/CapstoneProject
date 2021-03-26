@@ -55,12 +55,12 @@ The model we build using Heart failure dataset classify whether patient have cha
 
 I downloaded dataset file (.csv) from Kaggle site and added to my GitHub respository. I access dataset directly from my GitHub repository and registered the dataset into workspace. I have also added dataset file in my Jupyter notebook directory to access data during training (train.py)
 
-***Create Dataset:*** _URI source_
+***Registered Dataset:*** 
+	Registered into Workspace from GitHub Repository (From Web files).
 
 ![Create Dataset Registered](images/CreateDataset.png?raw=true "Create Dataset") 
 
-***Registered datasets:*** _heart-failure-prediction_
-
+	Dataset registered
 ![Dataset Registered](images/RegisteredDataset.png?raw=true "Dataset Registered") 
 
 ***Registered datasets Source:*** _URI_
